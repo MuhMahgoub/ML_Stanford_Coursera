@@ -18,10 +18,12 @@ for iter = 1:num_iters
     %
 
 
+J = (X * theta) - y;  % m*1 
+sumOfCostDerivative = J' * X; % 1*m x m*2 = 1*2
+theta = theta - ((alpha/m) .* sumOfCostDerivative');
 
 
 
-    theta = theta - alpha * (1/m) * ( X' * ((X * theta) - y));
 
 
 

@@ -13,15 +13,10 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-%avg = 1/(2 * m);
-%err = sum(((X * theta) - y) .^2);
-%J = avg * err;
+costSqr = ( (X * theta) - y)' * ( (X * theta) - y);
 
-avg = 1/(2 * m);
-err = ((X * theta) - y);
-err_sqr = err' * err;
+J = 1 / 2 / m * costSqr;
 
-J = avg * err_sqr;
 
 % =========================================================================
 
