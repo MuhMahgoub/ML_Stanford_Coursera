@@ -156,7 +156,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = theta(1,1) + (theta(2,1) * 1650) + (theta(3,1) * 3);; % You should change this
 
-
+quit
 % ============================================================
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
