@@ -31,11 +31,9 @@ X = [ones(m, 1) X];
 %       
 
 
-predict = sigmoid(X*all_theta');
-[predict_max, index_max] = max(predict, [], 2);
-p = index_max;
+cost = sigmoid(X * all_theta');
 
-
+[val, p]  = max(cost, [], 2);
 
 
 % =========================================================================

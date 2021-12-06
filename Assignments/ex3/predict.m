@@ -21,16 +21,24 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+% X has size 400 x 5000
+X = [ones(m, 1) X];
 
-a1 = [ones(m,1) X];
-z2 = a1 *Theta1';
-a2 = [ones(size(z2),1) sigmoid(z2)];
-z3 = a2*Theta2';
-a3 = sigmoid(z3);
 
-[predict_max, index_max] = max(a3, [], 2);
+% Theta1 has size 25 x 401
+% Theta2 has size 10 x 26
 
-p = index_max;
+
+
+layer2 = sigmoid(Theta1 * X'); % size 25 * 5000
+layer2 = [ones(1, m); layer2];
+
+output = sigmoid(Theta2 * layer2);  % size 10 * 5000
+
+[val, p]  = max(output', [], 2);
+
+
+
 
 
 
