@@ -62,25 +62,6 @@ for i = 1:m
     [error_val(i, 1), grad ] = linearRegCostFunction(Xval, yval, theta, 0);
 end
 
-
-% for i = 1:m
-
-%   % Setting train data
-%   train_examples_X = X(1:i,:);
-%   train_examples_y = y(1:i);
-
-%   % examine train theta(submit時に3x1行列になっているのはなぜ)
-%   [theta] = trainLinearReg(train_examples_X,train_examples_y,lambda);
-
-%   % examine Jtrain and Jval(「0」をlambdaと記載するとsubmitできなくなる。)
-%   [J,grad] = linearRegCostFunction(train_examples_X,train_examples_y,theta,0);
-%   error_train(i) = J;
-
-%   [J, grad] = linearRegCostFunction(Xval,yval,theta,0);
-%   error_val(i) = J;
-
-
-% end
 % -------------------------------------------------------------
 
 % =========================================================================
